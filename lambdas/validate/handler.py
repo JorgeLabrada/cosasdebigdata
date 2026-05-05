@@ -6,16 +6,16 @@ def handler(event, context):
     description = event.get("description", "")
 
     if priority_score is None:
-        raise ValueError("priority_score is required")
+        raise ValueError("mensaje 1")
 
     if not isinstance(priority_score, (int, float)):
-        raise ValueError("priority_score must be numeric")
+        raise ValueError("mensaje 2")
 
     if not (0 <= float(priority_score) <= 100):
-        raise ValueError("priority_score must be between 0 and 100")
+        raise ValueError("mensaje 3")
 
     if not description or not description.strip():
-        raise ValueError("description cannot be empty")
+        raise ValueError("mensaje 4")
 
     return {
         **event,

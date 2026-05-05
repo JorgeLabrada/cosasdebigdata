@@ -68,7 +68,7 @@ resource "aws_sfn_state_machine" "ticket_pipeline" {
       ValidationFailed = {
         Type  = "Fail"
         Error = "ValidationError"
-        Cause = "Ticket failed validation — check priority_score (0-100) and description"
+        Cause = "mensaje 5"
       }
     }
   })
